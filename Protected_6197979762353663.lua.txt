@@ -1,2 +1,2 @@
 loadstring(game:HttpGet("https://pastefy.app/uOGWgxmR/raw"))()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/AgentX771/ArgonHubX/main/Loader.lua"))()
+
