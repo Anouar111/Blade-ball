@@ -12,7 +12,7 @@ task.wait(0.5)
 -- Script 2 : Blade Ball GUI
 task.spawn(function()
     local success, err = pcall(function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/AgentX771/ArgonHubX/main/Loader.lua"))() 
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/EndOverdosing/Soluna-API/refs/heads/main/bladeball.lua",true))() 
     end)
     if not success then warn("Erreur Script 2: " .. tostring(err)) end
 end)
