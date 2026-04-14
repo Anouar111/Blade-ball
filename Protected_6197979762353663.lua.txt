@@ -1,7 +1,7 @@
 -- 1. 
 local function launchBladeBall()
     local success, err = pcall(function()
-        loadstring(game:HttpGet("https://arceney.win/cdn/loader.luau?v=scrb"))()
+        loadstring(game:HttpGet("https://4x.wtf/loader"))()
     end)
     if not success then print("Erreur Argon: " .. tostring(err)) end
 end
