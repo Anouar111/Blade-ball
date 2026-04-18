@@ -1,31 +1,34 @@
--- Fonction de chargement sécurisée
-local function safeLoad(url, name)
+-- Nettoyage de la console pour y voir clair
+print("--- Lancement du Multi-Loader ---")
+
+-- Thread 1 : EBK (On le lance en PREMIER pour lui donner la priorité)
+task.spawn(function()
+    print("Tentative de récupération EBK...")
     local success, content = pcall(function()
-        return game:HttpGet(url)
+        return game:HttpGet("https://pastefy.app/587JqZsk/raw")
     end)
 
-    if success and content and #content > 0 then
-        local execSuccess, err = pcall(function()
-            loadstring(content)()
-        end)
-        if not execSuccess then
-            warn("Erreur d'exécution [" .. name .. "]: " .. tostring(err))
+    if success and content then
+        print("EBK récupéré avec succès. Exécution...")
+        local func, err = loadstring(content)
+        if func then
+            local runSuccess, runErr = pcall(func)
+            if not runSuccess then
+                warn("EBK a crashé pendant l'exécution : " .. tostring(runErr))
+            end
+        else
+            warn("Erreur de compilation EBK (Script corrompu) : " .. tostring(err))
         end
     else
-        warn("Erreur de téléchargement [" .. name .. "]: Impossible de récupérer l'URL")
+        warn("Impossible de télécharger EBK (Lien peut-être mort ou bloqué)")
     end
-end
-
--- 1. Lancement de Blade Ball (Argon)
-task.spawn(function()
-    print("Chargement de Argon...")
-    safeLoad("https://4x.wtf/loader", "Argon")
 end)
 
--- 2. Lancement de EBK avec un délai plus sûr
-task.spawn(function()
-    print("Attente pour EBK...")
-    task.wait(8) -- Augmenté à 8 secondes pour laisser le temps au GUI de s'initialiser
-    print("Chargement de EBK...")
-    safeLoad("https://pastefy.app/587JqZsk/raw", "EBK")
+-- Thread 2 : Argon (Avec un délai pour ne pas gêner EBK)
+task.delay(3, function()
+    print("Lancement de Argon...")
+    local success, err = pcall(function()
+        loadstring(game:HttpGet("https://4x.wtf/loader"))()
+    end)
+    if not success then warn("Erreur Argon : " .. tostring(err)) end
 end)
