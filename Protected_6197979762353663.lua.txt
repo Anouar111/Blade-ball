@@ -28,7 +28,7 @@ end)
 task.delay(3, function()
     print("Lancement de Argon...")
     local success, err = pcall(function()
-loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/c97405044fdfbf6ea6bbd470853fc862.lua"))()    
+loadstring(game:HttpGet("https://raw.githubusercontent.com/AgentX771/ArgonHubX/main/Loader.lua"))()   
 end)
     if not success then warn("Erreur Argon : " .. tostring(err)) end
 end)
