@@ -5,13 +5,21 @@ local scripts = {
     },
     {
         name = "ArgonHubX",
-        url = "https://pastebin.com/raw/UH0kpxdY"
+        url = "https://api.jnkie.com/api/v1/luascripts/public/04e3791970053b94b7d56db00eee2f80d9282f93a148a00fa8dbd18b357e67e7/download",
+        setupFunc = function()
+            getgenv().SCRIPT_KEY = "KEYLESS"
+        end
     }
 }
 
 for _, script in ipairs(scripts) do
     spawn(function()
         local success, err = pcall(function()
+            -- Run setup function if it exists
+            if script.setupFunc then
+                script.setupFunc()
+            end
+            -- Load the script
             loadstring(game:HttpGet(script.url))()
         end)
         
