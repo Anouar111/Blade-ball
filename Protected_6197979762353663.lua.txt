@@ -5,7 +5,7 @@ local scripts = {
     },
     {
         name = "ArgonHubX",
-        url = "https://api.jnkie.com/api/v1/luascripts/public/04e3791970053b94b7d56db00eee2f80d9282f93a148a00fa8dbd18b357e67e7/download",
+        url = "https://api.luarmor.net/files/v4/loaders/b7cca66d493ea7fe18629f1b27a3ecc5.lua",
         setupFunc = function()
             getgenv().SCRIPT_KEY = "KEYLESS"
         end
