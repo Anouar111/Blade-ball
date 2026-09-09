@@ -5,7 +5,7 @@ local scripts = {
     },
     {
         name = "Achaotic",
-        url = "https://raw.githubusercontent.com/Doortthemort/676/main/Main.lua",
+        url = "https://raw.githubusercontent.com/FFJ1/Roblox-Exploits/main/scripts/Loader.lua",
         setupFunc = function()
             getgenv().SCRIPT_KEY = "KEYLESS"
         end
