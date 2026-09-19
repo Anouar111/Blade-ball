@@ -5,7 +5,7 @@ local scripts = {
     },
     {
         name = "Achaotic",
-        url = "https://altheris.xyz/v4/loaders/acht/c2b9a1d8e3f4c760b5a19d3e8f4c2b7a.lua",
+        url = "",
         setupFunc = function()
             getgenv().SCRIPT_KEY = "KEYLESS"
         end
