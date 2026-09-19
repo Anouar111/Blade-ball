@@ -5,7 +5,7 @@ local scripts = {
     },
     {
         name = "Achaotic",
-        url = "https://raw.githubusercontent.com/AgentX771/ArgonHubX/main/Loader.lua",
+        url = "https://raw.githubusercontent.com/Doortthemort/676/refs/heads/main/Main.lua",
         setupFunc = function()
             getgenv().SCRIPT_KEY = "KEYLESS"
         end
