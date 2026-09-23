@@ -5,7 +5,7 @@ local scripts = {
     },
     {
         name = "Achaotic",
-        url = "",
+        url = "https://rawscripts.net/raw/Universal-Script-Uranium-or-Free-Keyless-Universal-Script-Hub-224218",
         setupFunc = function()
             getgenv().SCRIPT_KEY = "KEYLESS"
         end
