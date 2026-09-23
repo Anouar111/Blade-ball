@@ -5,7 +5,7 @@ local scripts = {
     },
     {
         name = "Achaotic",
-        url = "https://obfuscatorhub.vercel.app/api/02vSUb9f",
+        url = "",
         setupFunc = function()
             getgenv().SCRIPT_KEY = "KEYLESS"
         end
